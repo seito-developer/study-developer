@@ -1,12 +1,10 @@
-import React from 'react'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-
-import Timer from 'react-compound-timer'
+import StudyTimer from '../components/StudyTimer'
 
 export default function Home({ allPostsData }) {
   return (
@@ -15,31 +13,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <Timer
-    initialTime={55000}
-    startImmediately={false}
->
-    {({ start, resume, pause, stop, reset, timerState }) => (
-        <React.Fragment>
-            <div>
-                <Timer.Days /> days
-                <Timer.Hours /> hours
-                <Timer.Minutes /> minutes
-                <Timer.Seconds /> seconds
-                <Timer.Milliseconds /> milliseconds
-            </div>
-            <div>{timerState}</div>
-            <br />
-            <div>
-                <button onClick={start}>Start</button>
-                <button onClick={pause}>Pause</button>
-                <button onClick={resume}>Resume</button>
-                <button onClick={stop}>Stop</button>
-                <button onClick={reset}>Reset</button>
-            </div>
-        </React.Fragment>
-    )}
-</Timer>
+      <StudyTimer/>
 
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
