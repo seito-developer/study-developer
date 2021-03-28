@@ -32,12 +32,12 @@ const StudyTimer = () => {
             </div>
             <div>{timerState}</div>
             <br />
-            <div>
-                <button onClick={start}>Start</button>
-                <button onClick={pause}>Pause</button>
-                <button onClick={resume}>Resume</button>
-                <button onClick={stop}>Stop</button>
-                <button onClick={reset}>Reset</button>
+            <div className={styles.timer__buttons}>
+                <button onClick={start}>スタート</button>
+                <button onClick={pause}>ポーズ</button>
+                <button onClick={resume}>リスタート</button>
+                <button onClick={stop}>ストップ</button>
+                <button onClick={reset}>リセット</button>
             </div>
         </React.Fragment>
     )}
