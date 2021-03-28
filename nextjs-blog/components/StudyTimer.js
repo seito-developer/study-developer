@@ -1,5 +1,6 @@
 import React from 'react'
 import Timer from 'react-compound-timer'
+import styles from './StudyTimer.module.scss'
 
 const StudyTimer = () => {
   return(
@@ -9,12 +10,25 @@ const StudyTimer = () => {
 >
     {({ start, resume, pause, stop, reset, timerState }) => (
         <React.Fragment>
-            <div>
-                <Timer.Days /> days
-                <Timer.Hours /> hours
-                <Timer.Minutes /> minutes
-                <Timer.Seconds /> seconds
-                <Timer.Milliseconds /> milliseconds
+            <div className={styles.timer__data}>
+                <dl className={styles.timer__dataItem}>
+                    <dt>
+                        <Timer.Hours />
+                    </dt>
+                    <dd>hours</dd>
+                </dl>
+                <dl className={styles.timer__dataItem}>
+                    <dt>
+                        <Timer.Minutes />
+                    </dt>
+                    <dd>minutes</dd>
+                </dl>
+                <dl className={styles.timer__dataItem}>
+                    <dt>
+                        <Timer.Seconds />
+                    </dt>
+                    <dd>seconds</dd>
+                </dl>
             </div>
             <div>{timerState}</div>
             <br />
