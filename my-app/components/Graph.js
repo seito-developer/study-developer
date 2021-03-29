@@ -4,6 +4,7 @@ import { Bar } from 'react-chartjs-2';
 const Graph = () => {
   /** グラフデータ */
   // 参考: https://qiita.com/eiji-noguchi/items/3ab0af5058fb47dc0caa
+  // 参考: http://reactchartjs.github.io/react-chartjs-2/#/stacked-bar
   const graphData = {
     labels: [
       '1/1','1/2','1/3','1/4','1/5','1/6','1/7'
