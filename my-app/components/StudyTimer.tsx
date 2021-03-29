@@ -4,7 +4,7 @@ import styles from './StudyTimer.module.scss'
 
 // https://volkov97.github.io/react-compound-timer/
 
-const StudyTimer = () => {
+const StudyTimer: React.FC = () => {
   return(
     <Timer
     initialTime={0}

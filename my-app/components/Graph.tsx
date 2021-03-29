@@ -1,7 +1,7 @@
 import React from 'react'
 import { Bar } from 'react-chartjs-2';
 
-const Graph = () => {
+const Graph: React.FC = () => {
   /** グラフデータ */
   // 参考: https://qiita.com/eiji-noguchi/items/3ab0af5058fb47dc0caa
   // 参考: http://reactchartjs.github.io/react-chartjs-2/#/stacked-bar
