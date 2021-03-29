@@ -44,7 +44,7 @@ const Home: React.FC = ({ allPostsData }) => {
   )
 }
 
-export default Home;
+export default Home
 
 export async function getStaticProps() {
   const allPostsData: any = getSortedPostsData()
