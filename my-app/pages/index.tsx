@@ -7,7 +7,7 @@ import Date from '../components/date'
 import StudyTimer from '../components/StudyTimer'
 import Graph from '../components/Graph'
 
-export default function Home({ allPostsData }) {
+const Home: React.FC = ({ allPostsData }) => {
   return (
     <Layout home>
       <Head>
@@ -44,8 +44,10 @@ export default function Home({ allPostsData }) {
   )
 }
 
+export default Home;
+
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData: any = getSortedPostsData()
   return {
     props: {
       allPostsData
