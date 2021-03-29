@@ -2,6 +2,8 @@ import React from 'react'
 import Timer from 'react-compound-timer'
 import styles from './StudyTimer.module.scss'
 
+// https://volkov97.github.io/react-compound-timer/
+
 const StudyTimer = () => {
   return(
     <Timer

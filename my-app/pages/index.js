@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import StudyTimer from '../components/StudyTimer'
+import Graph from '../components/Graph'
 
 export default function Home({ allPostsData }) {
   return (
@@ -14,6 +15,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <StudyTimer/>
+      <Graph />
 
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
