@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 
-export default function Post({ postData }) {
+const Post:React.FC = ({ postData }) => {
   return (
     <Layout>
       <Head>
@@ -20,9 +20,10 @@ export default function Post({ postData }) {
     </Layout>
   )
 }
+export default Post
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths:any = getAllPostIds()
   return {
     paths,
     fallback: false
@@ -30,7 +31,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData:any = await getPostData(params.id)
   return {
     props: {
       postData
