@@ -6,14 +6,15 @@ export default {
   title: 'Graph',
 };
 
-const Template = args => <Graph data={args} options={graphOption} />;
+const Template = args => <Graph {...args} />
 
-export const Default = Template.bind({});
-// const graphData = {
+export const Default = Template.bind({})
 Default.args = {
-  /** グラフデータ */
-  // 参考: https://qiita.com/eiji-noguchi/items/3ab0af5058fb47dc0caa
-  // 参考: http://reactchartjs.github.io/react-chartjs-2/#/stacked-bar
+  /** グラフデータ
+    参考: https://qiita.com/eiji-noguchi/items/3ab0af5058fb47dc0caa
+    参考: http://reactchartjs.github.io/react-chartjs-2/#/stacked-bar
+  */
+  graphData: {
     labels: [
       '1/1','1/2','1/3','1/4','1/5','1/6','1/7'
     ],
@@ -41,33 +42,33 @@ Default.args = {
         label: '学習量(SQL)',
       }
     ]
-  };
-
-/** グラフオプション */
-const graphOption = {
-  scales: {
-    xAxes: [
-      {
-        stacked: true,
-        ticks: {
-          beginAtZero: true,
-        },
-        scaleLabel: {
-          display: true,
-          labelString: '今週',
-        },
-      },
-    ],
-    yAxes: [
-      {
-        id: 'y-axis-precipitation',
-        stacked: true,
-        position: 'right',
-        scaleLabel: {
-          display: true,
-          labelString: '学習量(分)',
-        }
-      }
-    ],
   },
-};
+  /** グラフオプション */
+  graphOption: {
+    scales: {
+      xAxes: [
+        {
+          stacked: true,
+          ticks: {
+            beginAtZero: true,
+          },
+          scaleLabel: {
+            display: true,
+            labelString: '今週',
+          },
+        },
+      ],
+      yAxes: [
+        {
+          id: 'y-axis-precipitation',
+          stacked: true,
+          position: 'right',
+          scaleLabel: {
+            display: true,
+            labelString: '学習量(分)',
+          }
+        }
+      ],
+    },
+  }
+}
