@@ -1,0 +1,18 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size: 62.5%;
+	min-height: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	font-size: 14px;
+	line-height: 1.5;
+	font-family: $f-def;
+	color: $c-def;
+	padding-top: 87px;
+}
+.wrapper{
+  width: 100%;
+}

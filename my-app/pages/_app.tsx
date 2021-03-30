@@ -1,4 +1,5 @@
-import '../styles/global.css'
+import 'sanitize.css'
+import '../styles/global.scss'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />

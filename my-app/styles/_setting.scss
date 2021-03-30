@@ -1,0 +1,30 @@
+// font
+$f-def: system-ui, -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', 'Hiragino Sans', 'ヒラギノ角ゴ ProN W3', 'Helvetica Neue', Meiryo, "メイリオ", sans-serif;
+
+// clum width
+$gutter: 0;
+// $size_max: 980px;
+// $size_min: 320px;
+$break: 1040px;
+
+// scale (sprite生成で使用)
+$default-scale:1;
+
+//radius
+$radius: 12px;
+
+//color
+$c-black: #212121;
+$c-black-sub: rgba(29, 29, 29, 0.54);
+$c-gray:rgba(0, 0, 0, 0.12);
+$c-gray-sub: #fafafa;
+
+$c-def: $c-black;
+$c-main: #E7442B;
+
+// effect
+$dulation: .25s;
+$easing: ease-in-out;
+
+//z-index
+$z-max: 10;

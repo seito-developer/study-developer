@@ -8,8 +8,8 @@ module.exports = {
       ...config.module.rules.filter(rule => rule.test.source !== (/\.css$/).source),
       // css-loader を設定しなおす
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        test: /\.css$|scss/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
     config.resolve.alias = {
