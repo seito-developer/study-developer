@@ -6,8 +6,10 @@ import Link from 'next/link'
 import Date from '../components/date'
 import StudyTimer from '../components/StudyTimer'
 import Graph from '../components/Graph'
+import DynamicTable from '../components/DynamicTable'
 
 const Home: React.FC = ({ allPostsData }) => {
+
   return (
     <Layout home>
       <Head>
@@ -16,6 +18,7 @@ const Home: React.FC = ({ allPostsData }) => {
 
       <StudyTimer/>
       <Graph />
+      <DynamicTable />
 
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
