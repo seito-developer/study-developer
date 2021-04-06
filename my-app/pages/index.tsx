@@ -18,7 +18,7 @@ const Home: React.FC = ({ allPostsData }) => {
 
       <StudyTimer/>
       <Graph />
-      <DynamicTable />
+      {/* <DynamicTable /> */}
 
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
