@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { useTable, Column } from 'react-table';
+import { useTable, Column, useSortBy } from 'react-table';
 
 interface Data {
   name: string;
@@ -14,7 +14,7 @@ function DynamicTable({ columns, data }) {
     headerGroups,
     rows,
     prepareRow
-  } = useTable<Data>({ columns, data });
+  } = useTable<Data>({ columns, data }, useSortBy);
 
   return (
     <table {...getTableProps()}>
@@ -22,7 +22,17 @@ function DynamicTable({ columns, data }) {
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
-              <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                {column.render('Header')}
+                <span>
+                  {' '}
+                  {column.isSorted
+                    ? column.isSortedDesc
+                      ? ' 🔽'
+                      : ' 🔼'
+                    : ''}{' '}
+                </span>
+              </th>
             ))}
           </tr>
         ))}
