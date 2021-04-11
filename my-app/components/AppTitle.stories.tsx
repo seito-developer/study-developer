@@ -2,7 +2,7 @@ import React from 'react';
 import AppTitle from './AppTitle';
 
 export default {
-  title: 'AppTitle',
+  title: 'AppTitle'
 };
 
 export const showAppTitle = () => <AppTitle />;

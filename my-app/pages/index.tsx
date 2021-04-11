@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import Head from "next/head";
+// import Graph from "../components/Graph";
 
 const Home:FC = () => {
   return (
@@ -8,6 +9,8 @@ const Home:FC = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* <Graph /> */}
 
       <main>
         <h1>
@@ -61,7 +64,7 @@ const Home:FC = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

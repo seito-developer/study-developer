@@ -5,7 +5,7 @@ const AppTitle:React.FC = () => {
     <div>
       Hello world
     </div>
-  )
-}
+  );
+};
 
-export default AppTitle 
+export default AppTitle;

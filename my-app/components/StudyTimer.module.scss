@@ -1,0 +1,25 @@
+.timer__data {
+	display: flex;
+	justify-content: center;
+}
+.timer__dataItem {
+	margin: 0 10px;
+	> dt {
+		font-size: 30px;
+		display: inline-block;
+	}
+	> dd {
+		font-size: 30px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+.timer__buttons {
+	text-align: center;
+	> button {
+		font-size: 20px;
+		font-weight: bold;
+		padding: 10px;
+		margin: 0 3px;
+	}	
+}
