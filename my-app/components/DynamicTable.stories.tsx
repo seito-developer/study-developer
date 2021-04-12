@@ -19,27 +19,27 @@ const columns = [
     Header: '2021年3月請求分',
     columns: [
       {
-        Header: '',
+        Header: 'タイプ',
         accessor: 'type'
       },
       {
-        Header: '',
+        Header: '項目',
         accessor: 'cat'
       },
       {
-        Header: '',
+        Header: '会社名',
         accessor: 'company'
       },
       {
-        Header: '',
+        Header: 'タグ',
         accessor: 'tag'
       },
       {
-        Header: '',
+        Header: '金額',
         accessor: 'price'
       },
       {
-        Header: '',
+        Header: 'ステータス',
         accessor: 'status'
       }
     ]
