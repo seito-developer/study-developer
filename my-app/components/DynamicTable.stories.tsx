@@ -13,7 +13,7 @@ const Template = args => <DynamicTable {...args} />
 //   name: string;
 //   age: number;
 // }
-const data = makeData(10000)
+const data = makeData(100)
 const columns = [
   {
     Header: '2021年3月請求分',

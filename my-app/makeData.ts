@@ -8,7 +8,7 @@ const range = len => {
   return arr
 }
 
-const newPerson = () => {
+const newData = () => {
   const statusChance = Math.random()
   return {
     type: 
@@ -42,7 +42,7 @@ const newPerson = () => {
         : '入',
   }
 }
-// type: 'TBP初期開発',
+//     type: 'TBP初期開発',
 //     cat: '企画費',
 //     company: '株式会社四月一日企画',
 //     tag: '',
@@ -53,7 +53,7 @@ export default function makeData(...lens) {
     const len = lens[depth]
     return range(len).map(d => {
       return {
-        ...newPerson(),
+        ...newData(),
         subRows: lens[depth + 1] ? makeDataLevel(depth + 1) : undefined,
       }
     })
