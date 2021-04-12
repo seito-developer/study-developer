@@ -15,25 +15,52 @@ const Template = args => <DynamicTable {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
+  Header: '2021年3月請求分',
   columns: [
     {
-      Header: '名前',
-      accessor: 'name'
+      Header: '',
+      accessor: 'type'
     },
     {
-      Header: '年齢',
-      accessor: 'age'
+      Header: '',
+      accessor: 'cat'
     },
+    {
+      Header: '',
+      accessor: 'company'
+    },
+    {
+      Header: '',
+      accessor: 'tag'
+    },
+    {
+      Header: '',
+      accessor: 'price'
+    },
+    {
+      Header: '',
+      accessor: 'status'
+    }
   ],
   data: [
     {
-      name: 'John',
-      age: 23
+      type: 'TBP初期開発',
+      cat: '企画費',
+      company: '株式会社四月一日企画',
+      tag: '',
+      price: '100,000円',
+      status: '未'
     },
     {
-      name: 'Jane',
-      age: 26
+      type: 'TBP初期開発',
+      cat: '企画費',
+      company: '株式会社LIG',
+      tag: '#デザイン費',
+      price: '100,000円',
+      status: '決'
     }
   ]
 };
   
+
+// const data = React.useMemo(() => makeData(20), [])
