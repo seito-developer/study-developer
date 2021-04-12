@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import DynamicTable from './DynamicTable'
+import makeData from '../makeData'
 
 export default {
   component: DynamicTable,
@@ -12,55 +13,41 @@ const Template = args => <DynamicTable {...args} />
 //   name: string;
 //   age: number;
 // }
+const data = makeData(10000)
+const columns = [
+  {
+    Header: '2021年3月請求分',
+    columns: [
+      {
+        Header: '',
+        accessor: 'type'
+      },
+      {
+        Header: '',
+        accessor: 'cat'
+      },
+      {
+        Header: '',
+        accessor: 'company'
+      },
+      {
+        Header: '',
+        accessor: 'tag'
+      },
+      {
+        Header: '',
+        accessor: 'price'
+      },
+      {
+        Header: '',
+        accessor: 'status'
+      }
+    ]
+  }
+]
 
 export const Default = Template.bind({})
 Default.args = {
-  Header: '2021年3月請求分',
-  columns: [
-    {
-      Header: '',
-      accessor: 'type'
-    },
-    {
-      Header: '',
-      accessor: 'cat'
-    },
-    {
-      Header: '',
-      accessor: 'company'
-    },
-    {
-      Header: '',
-      accessor: 'tag'
-    },
-    {
-      Header: '',
-      accessor: 'price'
-    },
-    {
-      Header: '',
-      accessor: 'status'
-    }
-  ],
-  data: [
-    {
-      type: 'TBP初期開発',
-      cat: '企画費',
-      company: '株式会社四月一日企画',
-      tag: '',
-      price: '100,000円',
-      status: '未'
-    },
-    {
-      type: 'TBP初期開発',
-      cat: '企画費',
-      company: '株式会社LIG',
-      tag: '#デザイン費',
-      price: '100,000円',
-      status: '決'
-    }
-  ]
+  columns: columns,
+  data: data
 };
-  
-
-// const data = React.useMemo(() => makeData(20), [])

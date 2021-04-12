@@ -20,6 +20,7 @@ function DynamicTable({ columns, data }) {
   return (
     <table {...getTableProps()} className={styles.table}>
       <thead>
+        {console.log(headerGroups)}
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
