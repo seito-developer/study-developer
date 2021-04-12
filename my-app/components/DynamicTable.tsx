@@ -4,8 +4,12 @@ import { useTable, Column, useSortBy, useRowSelect } from 'react-table';
 import styles from './DynamicTable.module.scss';
 
 // interface Data {
-//   name: string;
-//   age: number;
+//   type: string;
+//   cat: string;
+//   company: string;
+//   tag: string;
+//   price: string;
+//   status:string;
 // }
 
 const IndeterminateCheckbox = React.forwardRef(
@@ -25,7 +29,7 @@ const IndeterminateCheckbox = React.forwardRef(
   }
 )
 
-function DynamicTable({ columns, data }) {
+const DynamicTable = ({ columns, data }) => {
 	const {
     getTableProps,
     getTableBodyProps,
@@ -34,8 +38,11 @@ function DynamicTable({ columns, data }) {
     prepareRow,
     selectedFlatRows,
     state: { selectedRowIds },
-  } = useTable( //<Data>
-    { columns, data }, 
+  } = useTable(
+    { 
+      columns, 
+      data 
+    }, 
     useSortBy,
     useRowSelect,
     hooks => {

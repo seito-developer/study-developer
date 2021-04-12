@@ -2,6 +2,9 @@ import React, { useMemo } from 'react'
 import DynamicTable from './DynamicTable'
 import makeData from '../makeData'
 
+// Referrence
+// https://react-table.tanstack.com/docs/examples/row-selection
+
 export default {
   component: DynamicTable,
   title: 'DynamicTable',
@@ -9,10 +12,6 @@ export default {
 
 const Template = args => <DynamicTable {...args} />
 
-// interface Data {
-//   name: string;
-//   age: number;
-// }
 const data = makeData(100)
 const columns = [
   {
