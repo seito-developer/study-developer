@@ -1,0 +1,10 @@
+.table {
+	display: table;
+	border-spacing: 0px;
+	th, td {
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	th {}
+	td {}
+}

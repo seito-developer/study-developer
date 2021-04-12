@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import { useTable, Column, useSortBy } from 'react-table';
+import styles from './DynamicTable.module.scss';
 
 interface Data {
   name: string;
@@ -17,7 +18,7 @@ function DynamicTable({ columns, data }) {
   } = useTable<Data>({ columns, data }, useSortBy);
 
   return (
-    <table {...getTableProps()}>
+    <table {...getTableProps()} className={styles.table}>
       <thead>
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
